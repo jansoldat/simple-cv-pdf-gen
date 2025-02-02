@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - {{name}}</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-main">
+      <div class="name-title">
+        <h1>{{name}}</h1>
+        <h2>{{t "content.title"}}</h2>
+      </div>
+      <div class="contact-info">
+        <p aria-label="{{t " contact.phone"}}">{{phone}}</p>
+        <a aria-label="{{t " contact.email"}}" href="mailto:{{email}}">{{email}}</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="social-links">
+    <p><i class="fas fa-location-dot"></i> {{t "content.location"}}</p>
+    <a href="{{portfolio}}" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-globe"></i> {{portfolio}}
+    </a>
+    <a href="https://linkedin.com/{{linkedin}}" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i> {{linkedin}}
+    </a>
+    <a href="https://{{github}}" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i> {{github}}
+    </a>
+  </section>
+
+  <main>
+    <section>
+      <h2>{{t "sections.summary"}}</h2>
+      <p>{{t "content.summary"}}</p>
+    </section>
+
+    <section>
+      <h2>{{t "sections.skills"}}</h2>
+      <div class="skills">
+        {{#each skills}}
+        <p class="skill-category">
+          <strong>{{category}}:</strong> {{{bold items}}}
+        </p>
+        {{/each}}
+      </div>
+    </section>
+
+    <section>
+      <h2>{{t "sections.experience"}}</h2>
+      {{#each experience}}
+      <article class="experience-item">
+        <div class="job-header">
+          <div class="job-title">
+            <div class="company-position">
+              <h3>{{company}}</h3>
+              <p class="position">{{t (concat "content.experience." id ".position")}}</p>
+            </div>
+          </div>
+          <div class="job-meta">
+            <p class="job-date">{{period}}</p>
+            <p class="job-location">{{t (concat "content.experience." id ".location")}}</p>
+          </div>
+        </div>
+        <ul class="achievements">
+          {{#each (translate "experience" id "achievements")}}
+          <li>{{{bold this}}}</li>
+          {{/each}}
+        </ul>
+      </article>
+      {{/each}}
+    </section>
+
+    <section>
+      <h2>{{t "sections.involvement"}}</h2>
+      {{#each involvement}}
+      <article class="involvement-item">
+        <div class="job-header">
+          <div class="job-title">
+            <div class="company-position">
+              <h3>{{organization}}</h3>
+              <p class="position">{{t (concat "content.involvement." id ".role")}}</p>
+            </div>
+          </div>
+          <div class="job-meta">
+            <p class="job-date">{{period}}</p>
+          </div>
+        </div>
+        <ul class="achievements">
+          {{#each (translate "involvement" id "achievements")}}
+          <li>{{{bold this}}}</li>
+          {{/each}}
+        </ul>
+      </article>
+      {{/each}}
+    </section>
+
+    <section>
+      <h2>{{t "sections.education"}}</h2>
+      {{#each education}}
+      <article class="education-item">
+        <div class="job-header">
+          <div class="job-title">
+            <div class="degree-institution">
+              <h3>{{t (concat "content.education." id ".degree")}}</h3>,
+              <h4>{{institution}}</h4>
+            </div>
+          </div>
+          <div class="job-meta">
+            <p class="job-date">{{period}}</p>
+          </div>
+        </div>
+      </article>
+      {{/each}}
+    </section>
+  </main>
+</body>
+
+</html>

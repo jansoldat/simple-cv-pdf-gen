@@ -1,0 +1,439 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+article,
+aside,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Improved base styles */
+:root {
+  --primary: #2d3748;
+  --secondary: #4a5568;
+  --accent: #3182ce;
+  --light: #f7fafc;
+  --spacer: 0.75rem;
+  --max-width: 8.5in;
+  --font-size-base: 12px;
+  --font-size-small: 11px;
+  --font-size-large: 18px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--primary);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.35;
+  font-size: var(--font-size-base);
+}
+
+/* Header */
+header {
+  margin-bottom: 0.5rem;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.name-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+  margin: 0;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: calc(var(--font-size-base) * 1.2);
+  color: var(--secondary);
+  margin: 0;
+  font-weight: normal;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.contact-info a,
+.contact-info p {
+  margin: 0;
+  font-size: var(--font-size-base);
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.location {
+  margin: 0;
+  color: var(--primary);
+  font-size: var(--font-size-base);
+}
+
+/* Social Links with location */
+.social-links {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1.5rem;
+  font-size: var(--font-size-base);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-links a,
+.social-links p {
+  color: var(--primary);
+  text-decoration: none;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.social-links i {
+  color: var(--secondary);
+  font-size: 0.9em;
+}
+
+/* Links section */
+.links {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: var(--font-size-base);
+}
+
+.links p {
+  margin: 0;
+}
+
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Section Headers */
+h2.title {
+  font-size: var(--font-size-base);
+  color: var(--secondary);
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.skills p {
+  margin: 0;
+  line-height: 1.3;
+  font-size: var(--font-size-small);
+}
+
+.skill-category {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.skill-category strong {
+  color: var(--accent);
+  min-width: 8rem;
+}
+
+/* Experience Section */
+.experience-item,
+.involvement-item,
+.education-item {
+  margin-bottom: 0.75rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.company-position {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.company-position h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary);
+}
+
+.position {
+  color: var(--primary);
+  font-style: italic;
+  margin: 0;
+}
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.125rem;
+}
+
+.job-date {
+  color: var(--secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+.job-location {
+  color: var(--secondary);
+  margin: 0;
+}
+
+.company-description {
+  font-style: italic;
+  color: var(--secondary);
+  margin: 0.25rem 0;
+  font-size: var(--font-size-small);
+}
+
+/* Lists */
+ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+li {
+  margin: 0.125rem 0;
+  line-height: 1.25;
+  position: relative;
+}
+
+/* Add custom bullet points */
+li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: var(--secondary);
+}
+
+/* Education Section */
+.education-header h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin: 0;
+}
+
+.education-header p {
+  color: var(--secondary);
+  margin: 0.125rem 0;
+  font-size: var(--font-size-small);
+}
+
+/* Achievements and details lists */
+.achievements,
+.details {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.achievements li,
+.details li {
+  margin: 0.125rem 0;
+  line-height: 1.4;
+  font-size: var(--font-size-base);
+}
+
+/* High-contrast & Accessibility */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #e2e8f0;
+    --secondary: #a0aec0;
+    --accent: #63b3ed;
+    --light: #1a202c;
+  }
+
+  body {
+    background-color: var(--light);
+  }
+}
+
+.job-location i {
+  font-size: 0.9em;
+  color: var(--accent);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+section > h2 {
+  font-size: var(--font-size-base);
+  text-transform: none;
+  font-weight: bold;
+  margin: 0.75rem 0 0.3rem;
+  padding: 0 0 0 0;
+  border-bottom: 1px solid var(--secondary);
+  position: relative;
+}
+
+/* Adjust spacing for first section */
+main section:first-child h2 {
+  margin-top: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Remove these old styles */
+.role-header,
+.education-header {
+  display: none;
+}
+
+/* Education specific styles */
+.degree-institution {
+  display: flex;
+  flex-direction: row;
+  gap: 0.125rem;
+  align-items: flex-start;
+}
+
+.degree-institution h4 {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  margin: 0;
+  color: var(--primary);
+}
+
+.degree-institution h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary);
+}
+
+.degree-institution .location {
+  color: var(--primary);
+  margin: 0;
+}
+
+/* Update education spacing */
+.education-item {
+  margin-bottom: 0.25rem;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}

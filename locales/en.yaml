@@ -1,0 +1,73 @@
+sections:
+  summary: SUMMARY
+  skills: SKILLS
+  experience: EXPERIENCE
+  involvement: INVOLVEMENT
+  education: EDUCATION
+
+contact:
+  email: Email
+  phone: Phone
+
+content:
+  title: Frontend Engineer
+  location: Currently based in Calgary, AB
+  summary: >-
+    Experienced front-end engineer (5+ years) specializing in React/TypeScript ecosystems with expertise in performance optimization, modern UI development, and developer tooling. Proven success in enterprise SaaS platforms and startup environments.
+
+  experience:
+    finofo:
+      position: Frontend Engineer
+      location: Calgary, AB, Canada
+      achievements:
+        - Led a frontend development team to optimize usability and performance for a financial automation platform.
+        - Built an Approval Transaction UI Workflow using **React, TypeScript, Zustand, Chakra UI**.
+        - Set up a Turborepo monorepo, introducing **ESLint, Prettier, Knip and Husky**.
+        - Integrated **Vitest, Playwright, and React Testing Library** ensuring frontend reliability.
+        - Designed and maintained **CI/CD pipelines with GitHub Actions**, automating deployments and testing workflows.
+        - Conducted **technical frontend interviews**, evaluating candidates and refining the hiring process.
+    veeam:
+      position: Frontend Engineer
+      location: Prague, Czech Republic
+      achievements:
+        - Developed scalable, high-performance UIs for Veeam ONE, a monitoring solution for data protection systems.
+        - Built configurable React-based interfaces, improving performance and scalability.
+        - Engineered **RIB-structured ** UI components using **React, TypeScript, RxJS, Styled Components, and Highcharts**.
+        - Applied **test-driven development (TDD)** with **Jest** to maintain code quality.
+
+    dotidot:
+      position: Frontend Engineer
+      location: Prague, Czech Republic
+      achievements:
+        - >-
+          Modernized legacy codebase while delivering new marketing automation product.
+        - >-
+          Developed a comprehensive **UI component library** using **React** and **TypeScript** for data-intensive platforms.
+        - >-
+          Implemented a **Web Worker-based CSV parser** (processing time reduced from **4s to 0.5s**).
+        - >-
+          Implemented **Cypress E2E tests** to ensure reliability and prevent regressions.
+        - >-
+          Integrated **React Testing Library, ESLint, and GraphQL Code Generator** for improved development workflows.
+    csad:
+      position: Technical Support
+      location: Prague, Czech Republic
+      achievements:
+        - "Automated XML processing workflows with Bash scripts."
+        - "Developed a **Playwright-based web scraper**, reducing data extraction time from **2 hours to 4 minutes.**"
+
+  involvement:
+    react_girls:
+      role: Mentor
+      achievements:
+        - >-
+          Mentored aspiring front-end developers, guiding them from project conception to delivery.
+        - >-
+          Assisted with tool selection, best practices, and hands-on development support.
+        - >-
+          Led successful project completions, with all mentees securing developer roles.
+
+  education:
+    ctu:
+      degree: MSc Intelligent Transport Systems
+      location: Prague, Czech Republic

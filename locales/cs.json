@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "summary": "SHRNUTÍ",
+    "skills": "DOVEDNOSTI",
+    "experience": "PRACOVNÍ ZKUŠENOSTI",
+    "involvement": "ZAPOJENÍ",
+    "education": "VZDĚLÁNÍ"
+  },
+  "contact": {
+    "location": "V současnosti působí v",
+    "email": "Email",
+    "phone": "Telefon"
+  },
+  "content": {
+    "title": "UX/UI & produktový designér",
+    "location": "V současnosti působí v Calgary, AB",
+    "summary": "Front-End Developer s 7 lety zkušeností v high-energy startup prostředích a mezinárodních korporacích...",
+    "experience": {
+      "veeam": {
+        "position": "Front-End vývojář",
+        "location": "Vancouver, BC",
+        "description": "Veeam Software, globální lídr na trhu, poskytuje komplexní řešení pro ochranu dat...",
+        "achievements": [
+          "Vyvinul vysoce konfigurovatelná a efektivní uživatelská rozhraní založená na **Reactu** od základů...",
+          "Nahradil starší řešení efektivnějším a škálovatelnějším systémem..."
+        ]
+      }
+    }
+  }
+}

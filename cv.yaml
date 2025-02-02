@@ -1,0 +1,44 @@
+name: "Jan Soldat"
+email: "jan.soldat@example.com"
+phone: "+1 (403) 714-7472"
+portfolio: "batist.design"
+linkedin: "in/nbatist"
+behance: "behance.net/nbatist"
+dribbble: "dribbble.com/nbatist"
+github: "github.com/jansoldat"
+
+skills:
+  - category: "Fundamental Skills"
+    items: "JavaScript, TypeScript, React, Node.js, GraphQL, RESTful APIs, HTML, CSS, SCSS"
+  - category: "UI & State"
+    items: "Context API, RxJS, Zustand, Tailwind CSS, Chakra UI, Styled Components"
+  - category: "Data Visualization"
+    items: "Recharts, Highcharts, Chart.js"
+  - category: "Testing"
+    items: "Jest, Vitest, React Testing Library, Cypress, Playwright"
+  - category: "Other Tools"
+    items: "Turborepo, Vite, Webpack, ESLint, Knip, Husky, Prettier, Storybook, Git, GitHub, Azure DevOps, GitHub Actions, CI/CD, AWS Amplify"
+
+experience:
+  - id: "finofo"
+    company: "Finofo"
+    period: "Sep 2024 - Present"
+  - id: "veeam"
+    company: "Veeam Software"
+    period: "Jun 2023 - Jul 2024"
+  - id: "dotidot"
+    company: "Dotidot s.r.o."
+    period: "Dec 2020 - May 2023"
+  - id: "csad"
+    company: "CSAD SVT Praha "
+    period: "Sep 2017 - Nov 2020"
+
+involvement:
+  - organization: "React Girls"
+    period: "March 2022 - January 2024"
+    id: "react_girls"
+
+education:
+  - institution: "Czech Technical University"
+    period: "2013 - 2018"
+    id: "ctu"
