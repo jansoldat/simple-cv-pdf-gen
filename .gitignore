@@ -14,6 +14,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+output/*
+
 # Dependency directories
 node_modules/
 jspm_packages/
@@ -49,3 +51,23 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
+
+# Output directory
+output/
+output/*
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
