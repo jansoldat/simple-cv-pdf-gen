@@ -1,4 +1,3 @@
-
 ## Customization
 
 ### CV Content
@@ -55,3 +54,13 @@ Jan Soldat
 - i18next - Internationalization
 - js-yaml - YAML parsing
 - puppeteer - PDF generation
+
+## CI/CD
+
+This project uses GitHub Actions to automatically generate the CV on each commit:
+
+- Generates English version of the CV
+- Uploads the PDF as an artifact
+- Commits the generated PDF back to the repository
+
+The generated PDF can be found in the `output` directory and in the workflow artifacts.
