@@ -25,9 +25,11 @@
 
   <section class="social-links">
     <p><i class="fas fa-location-dot"></i> {{t "content.location"}}</p>
-    <a href="{{portfolio}}" target="_blank" rel="noopener noreferrer">
+    {{#if portfolio}}
+    <a href="https://{{portfolio}}" target="_blank" rel="noopener noreferrer">
       <i class="fas fa-globe"></i> {{portfolio}}
     </a>
+    {{/if}}
     <a href="https://linkedin.com/{{linkedin}}" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-linkedin"></i> {{linkedin}}
     </a>

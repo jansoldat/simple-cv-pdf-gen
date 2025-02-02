@@ -71,7 +71,9 @@ jobs:
       run: npm ci
 
     - name: Generate CV
-      run: node index.js en
+      run: |
+        mkdir -p output
+        node index.js en
       env:
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
 
