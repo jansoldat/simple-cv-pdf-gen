@@ -16,10 +16,6 @@
         <h1>{{name}}</h1>
         <h2>{{t "content.title"}}</h2>
       </div>
-      <div class="contact-info">
-        <p aria-label="{{t " contact.phone"}}">{{phone}}</p>
-        <a aria-label="{{t " contact.email"}}" href="mailto:{{email}}">{{email}}</a>
-      </div>
     </div>
   </header>
 
@@ -30,6 +26,12 @@
       <i class="fas fa-globe"></i> {{portfolio}}
     </a>
     {{/if}}
+    <a href="mailto:{{email}}">
+      <i class="fas fa-envelope"></i> {{email}}
+    </a>
+    <p>
+      <i class="fas fa-phone"></i> {{phone}}
+    </p>
     <a href="https://linkedin.com/{{linkedin}}" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-linkedin"></i> {{linkedin}}
     </a>
