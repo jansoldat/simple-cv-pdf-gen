@@ -1,7 +1,7 @@
 name: "Jan Soldat"
-email: "jan.soldat@example.com"
-phone: "+1 (403) 714-7472"
-linkedin: "in/jan-soldat68"
+email: "jansoldat68@gmail.com"
+phone: "+1 (604) 354-9351"
+linkedin: "in/jansoldat"
 github: "github.com/jansoldat"
 
 skills:
@@ -27,12 +27,12 @@ experience:
     company: "Dotidot s.r.o."
     period: "Dec 2020 - May 2023"
   - id: "csad"
-    company: "CSAD SVT Praha "
+    company: "CSAD SVT Praha"
     period: "Sep 2017 - Nov 2020"
 
 involvement:
   - organization: "React Girls"
-    period: "March 2022 - January 2024"
+    period: "Mar 2022 - Jan 2024"
     id: "react_girls"
 
 education:
