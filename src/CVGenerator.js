@@ -1,12 +1,12 @@
-import fs from 'fs';
-import path from 'path';
-import yaml from 'js-yaml';
-import handlebars from 'handlebars';
-import { I18nService } from './I18nService.js';
-import { PdfService } from './PdfService.js';
-import { logger } from './utils/logger.js';
-import { registerHelpers } from './utils/handlebarsHelpers.js';
-import i18next from 'i18next';
+import fs from "fs";
+import path from "path";
+import yaml from "js-yaml";
+import handlebars from "handlebars";
+import { I18nService } from "./I18nService.js";
+import { PdfService } from "./PdfService.js";
+import { logger } from "./utils/logger.js";
+import { registerHelpers } from "./utils/handlebarsHelpers.js";
+import i18next from "i18next";
 
 export class CVGenerator {
   constructor(config) {
@@ -25,34 +25,37 @@ export class CVGenerator {
       await this.pdfService.generate(html, this.getOutputPath(lang));
       logger.info(`Generated CV for language: ${lang}`);
     } catch (error) {
-      logger.error('Failed to generate CV', error);
+      logger.error("Failed to generate CV", error);
       throw error;
     }
   }
 
   async loadData(lang) {
     try {
-      const data = yaml.load(await fs.promises.readFile('cv.yaml', 'utf8'));
+      const data = yaml.load(await fs.promises.readFile("cv.yaml", "utf8"));
       data.lang = lang;
       return data;
     } catch (error) {
-      logger.error('Failed to load CV data', error);
+      logger.error("Failed to load CV data", error);
       throw error;
     }
   }
 
   async renderTemplate(data) {
     try {
-      const templateContent = await fs.promises.readFile('template.html', 'utf8');
+      const templateContent = await fs.promises.readFile(
+        "template.html",
+        "utf8"
+      );
       const template = handlebars.compile(templateContent);
       return template(data);
     } catch (error) {
-      logger.error('Failed to render template', error);
+      logger.error("Failed to render template", error);
       throw error;
     }
   }
 
   getOutputPath(lang) {
-    return path.join(this.config.paths.output, `cv_${lang}.pdf`);
+    return path.join(this.config.paths.output, `jan-soldat-cv_${lang}.pdf`);
   }
 }

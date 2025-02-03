@@ -24,4 +24,47 @@ export const registerHelpers = (i18next) => {
   handlebars.registerHelper("concat", function (...args) {
     return args.slice(0, -1).join("");
   });
+
+  handlebars.registerHelper("formatDate", function (dateStr) {
+    if (!dateStr) return '';
+    if (dateStr === 'Present') return i18next.t('date.present');
+
+    const months = {
+      'Jan': { en: 'Jan', cs: 'Led' },
+      'Feb': { en: 'Feb', cs: 'Úno' },
+      'Mar': { en: 'Mar', cs: 'Bře' },
+      'Apr': { en: 'Apr', cs: 'Dub' },
+      'May': { en: 'May', cs: 'Kvě' },
+      'Jun': { en: 'Jun', cs: 'Čer' },
+      'Jul': { en: 'Jul', cs: 'Čvc' },
+      'Aug': { en: 'Aug', cs: 'Srp' },
+      'Sep': { en: 'Sep', cs: 'Zář' },
+      'Oct': { en: 'Oct', cs: 'Říj' },
+      'Nov': { en: 'Nov', cs: 'Lis' },
+      'Dec': { en: 'Dec', cs: 'Pro' }
+    };
+
+    const lang = i18next.language;
+
+    // Split on dash if it exists
+    const [startDate, endDate] = dateStr.split(' - ');
+
+    const formatSingleDate = (date) => {
+      const parts = date.split(' ');
+      const month = parts[0];
+      const year = parts[1];
+
+      if (months[month] && months[month][lang]) {
+        return `${months[month][lang]} ${year}`;
+      }
+      logger.warn(`Unknown month format: ${month}`);
+      return date;
+    };
+
+    if (endDate) {
+      return `${formatSingleDate(startDate)} - ${endDate === 'Present' ? i18next.t('date.present') : formatSingleDate(endDate)}`;
+    }
+
+    return formatSingleDate(startDate);
+  });
 };
